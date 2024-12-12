@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+    color: #ffffff;
+}
+main{
+    margin-top: 6rem;
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 6rem;
+}
+.contact-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.logo{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
