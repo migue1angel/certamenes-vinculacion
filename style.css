@@ -11,6 +11,10 @@ nav{
     display: flex;
     align-items: center;
     height: 6rem;
+    margin-bottom: 1rem;
+}
+.toggler{
+    background-color: #ffc107;
 }
 .contact-btn{
     position: fixed;

@@ -11,23 +11,37 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-dark shadow-lg">
-        <div class="logo ms-3">
-            <img src="assets/logo.png" width="80" height="80" alt="">
-            <img src="assets/text-logo.png" class="d-none d-md-block" width="225" height="50" alt="">
+    <nav class="navbar fixed-top navbar-expand-lg bg-dark shadow-lg">
+        <div class="container-fluid">
+            <div class="logo ms-3">
+                <img src="assets/logo.png" width="60" height="60" alt="">
+                <img src="assets/text-logo.png"  width="175" height="50" alt="">
+            </div>
+            
+            <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFilantropiaMenu" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarFilantropiaMenu">
+                <div class="navbar-nav ms-auto">
+                    <a href="#presentation" class="nav-item nav-link text-warning">Presentación</a>
+                    <a href="#categories" class="nav-item nav-link text-warning">Categorías</a>
+                    <a href="#sponsors" class="nav-item nav-link text-warning">Auspiciantes</a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <main>
-        <section>
+        <section id="presentation">
             <!-- presentación del certamen -->
         </section>
 
-        <section>
+        <section id="categories">
             <!-- imagenes de categorías -->
         </section>
         
-        <section>
+        <section id="sponsors">
             <!-- Auspiciantes y organizador -->
         </section>
 
