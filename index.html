@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-900 text-white">
-  <nav class="navbar fixed-top bg-gray-800 shadow-lg">
+<body class="bg-[#0f0f0f] text-white">
+  <nav class="navbar fixed-top shadow-lg bg-[#231b2a]">
     <div class="container mx-auto flex items-center justify-between px-4 py-3">
       <div class="logo flex items-center">
-        <img src="assets/logo.png" alt="Logo" class="w-14 h-14 mr-3">
-        <img src="assets/text-logo.png" alt="Texto Logo" class="w-44">
+        <img src="assets/logo.png" alt="Logo" class="w-20 h-20 mr-3">
+        <img src="assets/text-logo.png" alt="Texto Logo" class="sm:block md:hidden w-44">
       </div>
+      <div class="bg-[#FFD000] w-[60%] h-[2px] md:block hidden"></div>
       <div class="hidden md:flex space-x-4">
         <a href="#presentation" class="text-yellow-500 hover:text-yellow-400">Presentación</a>
         <a href="#categories" class="text-yellow-500 hover:text-yellow-400">Categorías</a>
@@ -23,22 +24,23 @@
       </div>
     </div>
   </nav>
-  <section id="presentación" class="flex items-center justify-between bg-gray-800 px-10 ">
-    <div class="hero-text w-full md:w-1/2">
-      <h1 class="text-yellow-500 text-6xl font-bold mb-6">Concurso de Belleza</h1>
-      <h2 class="text-yellow-500 text-2xl font-bold mb-6">¡Sé parte de algo extraordinario!</h2>
-      <p class="text-gray-300 text-lg leading-relaxed">
+  <section id="presentación" class="flex md:items-center relative bg-[#231b2a] justify-between md:px-10 h-[650px] md:h-screen overflow-hidden ">
+    <div class="hero-text w-full  md:w-1/2 p-2">
+      <div class="flex flex-col px-4 md:px-0">
+        <p class="text-[#eba34e] text-4xl md:text-[80px] font-bold  leading-none ">Certamen</p>
+        <p class="text-[#eba34e] text-4xl md:text-[80px] font-bold p-0 m-0 inline-block leading-none ">de belleza</p>
+      </div>
+      <h2 class="text-[#eba34e] px-4 md:px-0 text-base font-bold mb-6">¡Sé parte de algo extraordinario!</h2>
+      <p class="text-gray-300 md:text-lg px-4 md:px-0 text-sm leading-relaxed ">
         Únete al evento de belleza más esperado del año. El gran escenario internacional te espera en México, del 20 al 27 de abril.
         <br>
         Únete a esta experiencia única y representa lo mejor de Ecuador al mundo.
       </p>
-      <a href="#categories" class="mt-6 inline-block bg-yellow-500 text-white font-bold py-3 px-6 rounded hover:bg-yellow-400 transition">
+      <a href="#categories" class="mt-6 mx-4 inline-block border-2 border-[#eba34e] text-[#eba34e] font-bold py-3 px-6 rounded hover:bg-yellow-400 hover:text-white transition">
         Descubre más
       </a>
     </div>
-    <div class="hero-image w-full md:w-1/2">
-      <img src="assets/modelo.png" alt="Imagen de Participante" class="rounded-lg object-cover">
-    </div>
+      <img src="assets/modelo.png" alt="Imagen de Participante" class="absolute md:static bottom-0 object-cover w-[80%] md:w-[50%] right-0 transition-transform duration-300  ">
   </section>
   
   <main class="mt-20">
