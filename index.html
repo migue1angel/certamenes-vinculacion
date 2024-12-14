@@ -1,106 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certámenes Filántropa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certámenes Filantropía</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-dark shadow-lg">
-        <div class="container-fluid">
-            <div class="logo ms-3">
-                <img src="assets/logo.png" width="60" height="60" alt="">
-                <img src="assets/text-logo.png"  width="175" height="50" alt="">
-            </div>
-            
-            <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFilantropiaMenu" >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarFilantropiaMenu">
-                <div class="navbar-nav ms-auto">
-                    <a href="#presentation" class="nav-item nav-link text-warning">Presentación</a>
-                    <a href="#categories" class="nav-item nav-link text-warning">Categorías</a>
-                    <a href="#sponsors" class="nav-item nav-link text-warning">Auspiciantes</a>
-                </div>
-            </div>
+  <body class="bg-[#0f0f0f] text-white">
+    <nav class="navbar fixed-top shadow-lg bg-[#231b2a]">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <div class="logo flex items-center">
+          <img src="assets/logo.png" alt="Logo" class="w-20 h-20 mr-3" />
+          <img
+            src="assets/text-logo.png"
+            alt="Texto Logo"
+            class="sm:block md:hidden w-44"
+          />
         </div>
+        <div class="bg-[#FFD000] w-[60%] h-[2px] md:block hidden"></div>
+        <div class="hidden md:flex space-x-4">
+          <a href="#presentation" class="text-yellow-500 hover:text-yellow-400"
+            >Presentación</a
+          >
+          <a href="#categories" class="text-yellow-500 hover:text-yellow-400"
+            >Categorías</a
+          >
+          <a href="#sponsors" class="text-yellow-500 hover:text-yellow-400"
+            >Auspiciantes</a
+          >
+        </div>
+      </div>
     </nav>
-
-    <main>
-        <section id="presentation">
-            <!-- presentación del certamen -->
-        </section>
-
-        <section id="categories">
-            <!-- imagenes de categorías -->
-        </section>
-        
-        <section id="sponsors">
-            <!-- Auspiciantes y organizador -->
-        </section>
-
-        <a href="https://wa.link/pmegn8" class="contact-btn btn btn-success">Contáctanos</a>
+    <main class="">
+      <section
+        section
+        id="presentation"
+        transition-style="in:wipe:up"
+        class="flex md:items-center relative bg-[#231b2a] justify-between md:px-10 h-[650px] md:h-screen overflow-hidden"
+      >
+        <div class="hero-text w-full md:w-1/2 p-2">
+          <div class="flex flex-col px-4 md:px-0">
+            <p
+              class="text-[#eba34e] text-4xl md:text-[80px] font-bold leading-none"
+            >
+              Certamen
+            </p>
+            <p
+              class="text-[#eba34e] text-4xl md:text-[80px] font-bold p-0 m-0 inline-block leading-none"
+            >
+              de belleza
+            </p>
+          </div>
+          <h2 class="text-[#eba34e] px-4 md:px-0 text-base font-bold mb-6">
+            ¡Sé parte de algo extraordinario!
+          </h2>
+          <p
+            class="text-gray-300 md:text-lg px-4 md:px-0 text-sm leading-relaxed"
+          >
+            Únete al evento de belleza más esperado del año. El gran escenario
+            internacional te espera en México, del 20 al 27 de abril.
+            <br />
+            Únete a esta experiencia única y representa lo mejor de Ecuador al
+            mundo.
+          </p>
+          <a
+            href="#categories"
+            class="mt-6 inline-block border-2 border-[#eba34e] text-[#eba34e] font-bold py-3 px-6 rounded hover:bg-yellow-400 hover:text-white transition"
+          >
+            Descubre más
+          </a>
+        </div>
+        <img
+          src="assets/modelo.png"
+          alt="Imagen de Participante"
+          class="absolute md:static bottom-0 object-cover w-[80%] md:w-[50%] right-0 transition-transform duration-300"
+        />
+      </section>
+      <section
+        id="categories"
+        transition-style="in:wipe:up"
+        class="container mx-auto my-10"
+      >
+        <h2 class="text-center text-white text-3xl font-bold mb-8">Castings</h2>
+        <div id="categoriesCarousel" class="relative overflow-hidden">
+          <div
+            class="carousel-inner flex transition-transform duration-700 ease-in-out"
+          >
+            <!-- Queen -->
+            <div
+              class="carousel-item flex-shrink-0 w-full flex flex-col md:flex-row items-center justify-between px-4"
+            >
+              <div class="carousel-text p-5 md:w-1/2">
+                <h3 class="text-yellow-500 text-3xl md:text-7xl font-bold">
+                  Categoría Queen
+                </h3>
+              </div>
+              <img
+                src="assets/img/queen.jpg"
+                alt="Categoría Queen"
+                class="border-2 border-[#eba34e] w-full md:w-1/2 object-cover rounded-lg transition duration-300 ease-in-out hover:scale-102"
+              />
+            </div>
+            <!-- Gold -->
+            <div
+              class="carousel-item flex-shrink-0 w-full flex flex-col md:flex-row items-center justify-between px-4"
+            >
+              <div class="carousel-text p-5 md:w-1/2">
+                <h3 class="text-yellow-500 text-3xl md:text-7xl font-bold">
+                  Categoría Gold
+                </h3>
+              </div>
+              <img
+                src="assets/img/gold.jpg"
+                alt="Categoría Gold"
+                class="border-2 border-[#eba34e] w-full md:w-1/2 object-cover rounded-lg transition duration-300 ease-in-out hover:scale-102"
+              />
+            </div>
+            <!-- Miss -->
+            <div
+              class="carousel-item flex-shrink-0 w-full flex flex-col md:flex-row items-center justify-between px-4"
+            >
+              <div class="carousel-text p-5 md:w-1/2">
+                <h3 class="text-yellow-500 text-3xl md:text-7xl font-bold">
+                  Categoría Miss
+                </h3>
+              </div>
+              <img
+                src="assets/img/miss.jpg"
+                alt="Categoría Miss"
+                class="border-2 border-[#eba34e] w-full md:w-1/2 object-cover rounded-lg transition duration-300 ease-in-out hover:scale-102"
+              />
+            </div>
+            <!-- Mrs -->
+            <div
+              class="carousel-item flex-shrink-0 w-full flex flex-col md:flex-row items-center justify-between px-4"
+            >
+              <div class="carousel-text p-5 md:w-1/2">
+                <h3 class="text-yellow-500 text-3xl md:text-7xl font-bold">
+                  Categoría Mrs.
+                </h3>
+              </div>
+              <img
+                src="assets/img/mrs.jpg"
+                alt="Categoría Mrs"
+                class="border-2 border-[#eba34e] w-full md:w-1/2 object-cover rounded-lg transition duration-300 ease-in-out hover:scale-102"
+              />
+            </div>
+            <!-- Men -->
+            <div
+              class="carousel-item flex-shrink-0 w-full flex flex-col md:flex-row items-center justify-between px-4"
+            >
+              <div class="carousel-text p-5 md:w-1/2">
+                <h3 class="text-yellow-500 text-3xl md:text-7xl font-bold">
+                  Categoría Men
+                </h3>
+              </div>
+              <img
+                src="assets/img/men.jpg"
+                alt="Categoría Hombres"
+                class="border-2 border-[#eba34e] w-full md:w-1/2 object-cover rounded-lg transition duration-300 ease-in-out hover:scale-102"
+              />
+            </div>
+            <!-- Teens -->
+            <div
+              class="carousel-item flex-shrink-0 w-full flex flex-col md:flex-row items-center justify-between px-4"
+            >
+              <div class="carousel-text p-5 md:w-1/2">
+                <h3 class="text-yellow-500 text-3xl md:text-7xl font-bold">
+                  Categoría Teens
+                </h3>
+              </div>
+              <img
+                src="assets/img/teens.jpg"
+                alt="Categoría Jóvenes"
+                class="border-2 border-[#eba34e] w-full md:w-1/2 object-cover rounded-lg transition duration-300 ease-in-out hover:scale-102"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sponsors" transition-style="in:wipe:up"></section>
+      <a
+        href="https://wa.link/pmegn8"
+        class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg"
+      >
+        Contáctenos
+      </a>
     </main>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
-<footer class="bg-dark text-light pt-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Contact Information -->
-            <div class="col-md-4 text-start">
-                <img src="assets/logo.png" alt="Logo" class="mb-3" style="width: 100px;">
-                <p>
-                    <strong>Certámenes Filantropía Altruistic Representative Ecuador</strong><br>
-                    <a href="https://m.facebook.com/profile.php?id=100057065275259&name=xhp_nt__fb__action__open_user" class="text-light text-decoration-none" target="_blank">
-                        Visítanos en Facebook
-                    </a>
-                </p>
-                <p>
-                    <i class="bi bi-telephone-fill"></i> +593 987 137 796<br>
-                    <i class="bi bi-envelope-fill"></i> sadelmodelos@gmail.com<br>
-                    <i class="bi bi-geo-alt-fill"></i> Quito, Ecuador
-                </p>
-            </div>
-
-            <!-- Sponsors -->
-            <div class="col-md-4 text-center">
-                <h5 class="text-uppercase mb-4">Auspiciantes</h5>
-                <div class="d-flex align-items-center justify-content-center">
-                    <img src="assets/Patrocinador1.jpg" alt="Patrocinador 1" class="mx-3" style="width: 150px; height: auto; border-radius: 10px;">
-                    <span class="mx-2" style="font-size: 24px; font-weight: bold;">X</span>
-                    <img src="assets/Patrocinador2.jpg" alt="Patrocinador 2" class="mx-3" style="width: 150px; height: auto; border-radius: 10px;">
-                </div>
-            </div>
-
-            <!-- Sponsor Links -->
-            <div class="col-md-4 text-end">
-                <ul class="list-unstyled">
-                    <li class="mb-2"><b>SADEL MODEL:</b> 
-                        <a href="https://m.facebook.com/sadelmodelos/" class="text-light text-decoration-none" target="_blank">Facebook</a></li>
-                    <li class="mb-2"><b>FUNCIONA CREATIVO:</b> 
-                        <a href="https://m.facebook.com/funcionacreativo/" class="text-light text-decoration-none" target="_blank">Facebook</a></li>
-                </ul>
-            </div>
+    <footer class="relative h-64 w-full" >
+      <div
+        class="absolute inset-0 md:bg-[url('assets/img/fondo.jpeg')] bg-cover bg-center h-screen opacity-30"
+      ></div>
+      <div
+        class="pt-5 h-screen flex flex-col md:flex-row items-center p-4 relative z-50"
+      >
+        <div
+          class="h-[90%] w-1/5 flex flex-col justify-center items-center p-4"
+        >
+          <p class="text-xl text-center mb-4 md:mb-12">SADEL Modelos</p>
+          <div class="hover:text-yellow-400 flex items-center gap-2">
+            <i class="fa-brands fa-facebook"></i>
+            <a
+              href="https://m.facebook.com/sadelmodelos/"
+              class=""
+              target="_blank"
+              >Facebook</a
+            >
+          </div>
+          <div class="hover:text-yellow-400 flex items-center gap-2">
+            <i class="fa-brands fa-instagram"></i>
+            <a
+              href="https://m.facebook.com/sadelmodelos/"
+              class=""
+              target="_blank"
+              >Instagram</a
+            >
+          </div>
+          <div></div>
         </div>
-        <!-- Footer bottom -->
-        <div class="text-center py-3 mt-4" style="background-color: #333;">
-            <small>&copy; All rights reserved 2019</small>
+        <div
+          class="text-center w-3/5 m-auto flex flex-col items-center md:block"
+        >
+          <h5 class="text-uppercase mb-10 text-3xl text-yellow-300 md:text-white md:text-5xl">NUESTROS AUSPICIANTES</h5>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center"
+          >
+            <img
+              src="assets/Patrocinador1.jpg"
+              alt="Patrocinador 1"
+              class="mx-3"
+              style="width: 150px; height: auto; border-radius: 10px"
+            />
+            <span class="mx-2" style="font-size: 24px; font-weight: bold"
+              >X</span
+            >
+            <img
+              src="assets/Patrocinador2.jpg"
+              alt="Patrocinador 2"
+              class="mx-3"
+              style="width: 150px; height: auto; border-radius: 10px"
+            />
+          </div>
+          <div class="flex gap-4 justify-center">
+            <img src="assets/logo.png" alt="Logo" class="w-20 mt-4" />
+          </div>
+          <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+            <div class="flex gap-2">
+              <i class="bi bi-telephone-fill"></i>
+              +593 987 137 796
+            </div>
+            <div class="flex gap-2">
+              <i class="bi bi-envelope-fill"></i> sadelmodelos@gmail.com
+            </div>
+            <div class="hover:text-yellow-400">
+              <i class="bi bi-geo-alt-fill"></i>
+              <a
+                href="https://m.facebook.com/profile.php?id=100057065275259&name=xhp_nt__fb__action__open_user"
+                class="text-light text-decoration-none"
+                target="_blank"
+              >
+                Visítanos en Facebook
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
-</footer>
-
-<!-- Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
+        <div
+          class="h-[90%] w-1/5 flex flex-col justify-center items-center p-4 gap-4"
+        >
+          <p class="text-xl mb-4 md:mb-12 text-center">Funciona Corp</p>
+          <div class="hover:text-yellow-400 flex items-center gap-2">
+            <i class="fa-brands fa-facebook"></i>
+            <a
+              href="https://m.facebook.com/funcionacreativo/"
+              class=""
+              target="_blank"
+              >Facebook</a
+            >
+          </div>
+          <div class="hover:text-yellow-400 flex items-center gap-2">
+            <i class="fa-brands fa-instagram"></i>
+            <a
+              href="https://m.facebook.com/sadelmodelos/"
+              class=""
+              target="_blank"
+              >Instagram</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
 </html>
